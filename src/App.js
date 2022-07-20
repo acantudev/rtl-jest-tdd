@@ -6,9 +6,9 @@ export function replaceCamelWithSpaces(colorName) {
 }
 
 function App() {
-  const [buttonColor, setButtonColor] = useState('red');
+  const [buttonColor, setButtonColor] = useState('MediumVioletRed');
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
-  const newButtonColor = buttonColor === 'red' ? 'blue' : 'red';
+  const newButtonColor = buttonColor === 'MediumVioletRed' ? 'MidnightBlue' : 'MediumVioletRed';
 
   const changeColor = () => {
     setButtonColor(newButtonColor);
@@ -25,7 +25,7 @@ function App() {
         onClick={changeColor}
         style={{ color: 'white', backgroundColor: isButtonDisabled ? 'gray' : buttonColor }}
       >
-        Change to {newButtonColor}
+        Change to {replaceCamelWithSpaces(newButtonColor)}
       </button>
 
       <label>
